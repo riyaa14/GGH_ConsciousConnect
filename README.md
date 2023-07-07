@@ -1,6 +1,14 @@
 # GGH_ConsciousConnect
 
-How to run this project on your local device
+## About the Project
+###Problem
+Most of the people are not aware of the term "sustainability". Only 1 in 3 people are aware of the term "sustainability," and only 20% can correctly identify the three pillars of sustainability. Lack of awareness and engagement in environmental issues is a significant challenge in today's world. People often fail to understand the impact of their actions on the environment, resulting in unsustainable practices and habits.
+
+###Solution
+The platform, "ConsciousConnect," addresses this problem by providing a space for users to share environment-related content and earn points for raising awareness. We go beyond just creating awareness by promoting sustainable actions through a unique coupons and points system. Users can redeem their earned points as coupons to purchase sustainable products from our shop section. By incentivizing eco-friendly purchases, we encourage users to make conscious choices that contribute to a greener planet. In addition, future AI capabilities will further enhance user engagement by intelligently assessing and rewarding impactful content. And in future the inclusion of challenges hosted by NGOs and educators, ConsciousConnect fosters a collaborative and educational environment, encouraging users to make a positive impact on the planet.
+
+
+###How to run this project on your local device
 1. Fork and then clone this repository
 2. Run npm install to get all packages used
 3. Run npm start
