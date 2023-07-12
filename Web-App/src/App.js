@@ -5,6 +5,7 @@ import Navbar from "./Components/nav-bar";
 import Community from "./Pages/Community";
 import Login from "./Pages/Login";
 import Shop from "./Pages/shop";
+import Challenges from "./Pages/challenges";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/community" element={<Community />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/challenges" element={<Challenges />} />
       </Routes>
     </div>
   );

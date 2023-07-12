@@ -66,7 +66,7 @@ function Navbar() {
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <Link to="#">Challenges</Link>
+              <Link to="/challenges">Challenges</Link>
             </li>
             <li>
               <Link to="/Community">Community</Link>
