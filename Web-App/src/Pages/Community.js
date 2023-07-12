@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-
-import { db } from "../firebase-config";
+import { onAuthStateChanged } from "firebase/auth";
+import { db, auth } from "../firebase-config";
 import { doc, getDocs, collection, deleteDoc } from "firebase/firestore";
 
 import Post from "../Components/posts";
@@ -26,15 +26,19 @@ function Community() {
 
   useEffect(() => {
     getposts();
-    deleteDoc(doc(db, "Post", "tKFK18Qs85bgJtQ8B7kO"));
-    deleteDoc(doc(db, "Post", "urYBD9cObZnAeRGQPwQd"));
   }, []);
 
   return (
     <div className="community">
       <Newpost />
       {Posts.map((post) => (
-        <Post key={post.id} username={post.Username} content={post.Content} />
+        <Post
+          key={post.id}
+          username={post.Username}
+          content={post.Content}
+          uid={post.uid}
+          postID={post.id}
+        />
       ))}
     </div>
   );

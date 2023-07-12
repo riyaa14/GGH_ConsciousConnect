@@ -293,17 +293,25 @@ body {
   
 }
 
+.shop-heading{
+  margin-left: 30px;
+}
+
 .product-card {
-  max-width: 12em;
+  /* max-width: 12em; */
   margin: 50px 50px;
   background-color: #fff;
   padding: 1em;
   box-shadow: 0 5px 5px #e1e1e1;
   font-family: Arial, Helvetica, sans-serif;
 }
-.product-card img {
-  max-width: 100%;
+.product-img image{
+  width: 100px;
+  height: 100px;
+  visibility: visible;
+  
 }
+
 .product-card h4 {
   font-size: 1.3em;
   margin: 0.5em 0;
@@ -337,3 +345,31 @@ body {
   }
 }
 
+/* ************************ */
+.offer {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  border: 10px dotted #9ff4bb;
+  width: 200px;
+  height: 100px;
+  margin: 30px auto 0 auto;
+}
+
+.offer h3 {
+  margin: 0px;
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  color: rgb(5, 142, 167);
+}
+
+.offer p {
+  margin-bottom: 0px;
+}
+
+.offer img {
+  position: absolute;
+  top: -70px;
+  bottom: auto;
+  right: -70px;
+}

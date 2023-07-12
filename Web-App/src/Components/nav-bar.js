@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 
@@ -35,7 +35,13 @@ function Navbar() {
   };
 
   useEffect(() => {
-    getpoints();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        getpoints();
+      } else {
+        console.log("user logged out");
+      }
+    });
   }, []);
 
   return (

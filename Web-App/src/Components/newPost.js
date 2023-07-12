@@ -60,6 +60,7 @@ function Newpost() {
       await addDoc(postsCollectionRef, {
         Content: content,
         Username: auth?.currentUser?.displayName,
+        uid: auth?.currentUser?.uid,
       });
 
       // UPDATE POINTS
