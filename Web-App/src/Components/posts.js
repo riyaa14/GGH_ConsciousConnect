@@ -2,6 +2,11 @@ import { doc, deleteDoc, getDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faComment,
+  faBookmark,
+} from "@fortawesome/free-regular-svg-icons";
 
 function posts(props) {
   const id = props.postID;
@@ -39,10 +44,25 @@ function posts(props) {
             <p>{props.content}</p>
           </div>
           {auth?.currentUser?.uid === props.uid && (
-            <button onClick={handleDelete}>
-              <FontAwesomeIcon icon={faTrash} />
+            <button
+              style={{
+                backgroundColor: "transparent",
+                border: 0,
+                position: "relative",
+                left: 1000,
+                top: -90,
+              }}
+              onClick={handleDelete}
+            >
+              <FontAwesomeIcon icon={faTrash} size="2xl" />
             </button>
           )}
+
+          <div style={{ marginTop: 30 }}>
+            <FontAwesomeIcon style={{ padding: 7 }} icon={faHeart} />
+            <FontAwesomeIcon style={{ padding: 7 }} icon={faComment} />
+            <FontAwesomeIcon style={{ padding: 7 }} icon={faBookmark} />
+          </div>
         </div>
       </div>
     </>
